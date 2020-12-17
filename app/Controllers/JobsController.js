@@ -22,7 +22,9 @@ export default class JobsController {
   }
 
 
-  createJob() {
+  createJob(event) {
+    event.preventDefault();
+    let formData = event.target;
     console.log("creating the job");
     JobsService.createJob();
     _drawJobs();
